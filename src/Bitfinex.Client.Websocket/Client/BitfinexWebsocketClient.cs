@@ -340,8 +340,9 @@ namespace Bitfinex.Client.Websocket.Client
             {
                 book.Pair = subscription.Pair;
                 book.ChanId = subscription.ChanId;
-                Streams.Raise(book);
             }
+            Streams.Raise(books);
+
         }
 
         private T Deserialize<T>(string msg)
